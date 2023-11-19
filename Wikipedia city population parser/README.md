@@ -3,7 +3,7 @@ This repo allowing to get a full info from Wikipedia article for 1 city_name <br
 I wanted to get just 1 parameter (population) from multiple city names
 
 ### How to use this parser
-* Open [Wikipedia (wiki) population parser.ipynb]()
+* Open [Wikipedia (wiki) population parser.ipynb](https://github.com/Ulcor/learning/tree/main/Wikipedia%20city%20population%20parser)
 * Have a list of city_names in English in a valid wiki format <br >
 * To check which names are valid, insert name after wiki/ <br >
 example:
