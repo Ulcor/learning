@@ -3,7 +3,7 @@
 ### Brief
 The module designed to load message logs from your Twilio account <br >
 Final data will be limited by date range and loaded by 200m/batch to avoid API lock <br >
-Logs wil contain personal information, that is protected by international law <br >
+Logs wil contain personal information, such as phone numbers <br >
 Use it only after necessary precautions
 
 ### How to use
@@ -25,7 +25,7 @@ You can also add/remove columns using records.needed_column and add it into resu
                       REGEXP_EXTRACT(body, r'https?://([^/]+)') AS host_url,
                       REGEXP_EXTRACT(body, r'https?://[^\s]+')  AS full_link,
                       phone_to
-               FROM your_project.your_project.twilio
+               FROM your_project.your_dataset.twilio
                WHERE date_sent_format >= "2024-02-01"
                  AND phone_to != 1234567 -- user writing back to a bot. Insert your bot number
                ORDER BY date_sent_format DESC) 
@@ -56,7 +56,7 @@ SELECT date_sent,
        COUNT(phone_to) OVER (PARTITION BY phone_to, date_sent_format)                        AS messages_per_session,
        COUNT(phone_to)
              OVER (PARTITION BY REGEXP_EXTRACT(body, r'/orders/([^/?]+)'), date_sent_format) AS messages_per_order
-FROM your_project.your_project.twilio
+FROM your_project.your_dataset.twilio
 WHERE date_sent_format = '2024-02-14'
   AND phone_to != 1234567 -- user writing back to a bot. Insert your bot number
 GROUP BY 1, 2, 3, 4
