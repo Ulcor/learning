@@ -1,10 +1,10 @@
 class File:
-    def __init__(self, path, filename, extension="png"):
+    def __init__(self, path, filename, extension="png"):  # Method
         self.path = path
         self.filename = filename
         self.extension = extension
 
-    def __str__(self):  # returns a formatted path
+    def __str__(self):   # Also Method. returns a formatted path
         return f"{self.path}/{self.filename}.{self.extension}"
 
 
