@@ -18,5 +18,5 @@ class Driver(Human):  # Child class
 person = Human('Luke', 'Skywalker')
 driver = Driver('Han', 'Solo', 123456)
 
-person.move()
+person.move() #
 driver.move()
