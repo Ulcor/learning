@@ -14,15 +14,12 @@ class Driver(Human):  # Child class
         super().__init__(first_name, last_name, age)
         self.driver_license = driver_license
 
-
-class BusDriver(Driver):
-    def calculate_change(self, ticket_price=1, money=10):
-        result = money - ticket_price
-        return result
+    def move(self):
+        print(f"{self.first_name} {self.last_name} is driving")  # This is polymorphism 
 
 
-person = Human('Luke', 'Skywalker')
+human = Human('Luke', 'Skywalker')
+human.move()  # выведет в консоль "Luke Skywalker is walking"
+
 driver = Driver('Han', 'Solo', 123456)
-
-person.move()
-driver.move()
+driver.move()  # теперь выведет в консоль "Han Solo is driving", так как у Driver есть свой move
