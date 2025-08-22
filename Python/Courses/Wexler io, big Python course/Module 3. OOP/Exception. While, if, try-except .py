@@ -3,7 +3,7 @@ import os
 
 age = "35sds"  # will raise an error
 age_2 = 35  # always int
-my_path = 'Python/Courses/Wexler io, big Python course/Module 3 OOP/test_file.csv'
+my_path = 'Python/Courses/Wexler io, big Python course/Module 3. OOP/test_file.csv'
 
 while not os.path.exists(my_path):
     try:
