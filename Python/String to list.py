@@ -5,12 +5,15 @@
 
 # With cycle, manual, for garbage interviews
 my_string = "AABBCC"
-char_list = []
 
-for items in my_string:
-    for character in items:
-        char_list.append(character)
+def string_to_char_list(strng: str):
+    char_list = []
+    for items in my_string:
+        for character in items:
+            char_list.append(character)
+    return char_list
 
-print(char_list)
+
+print(string_to_char_list(my_string))
 
 
