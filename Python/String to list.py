@@ -4,7 +4,7 @@
 # print(char_list)
 
 # With cycle, manual, for garbage interviews
-my_string = "AABBCC"
+my_string = "AABBывCC"
 
 def string_to_char_list(strng: str):
     char_list = []
