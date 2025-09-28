@@ -45,12 +45,12 @@ def parse_poem(poem: str):
             continue
         if animal is None:
             animal = rows.split(' ')[0] # first word
-            print(f'Животное: {animal}')
+            # print(f'Животное: {animal}')
         elif rows.startswith('-'):
             rows = rows.replace('-', ' ').replace('!', '').strip()
             rows = rows.split(',')
             rows = rows[0]
-            print(f'Звук: {rows}')
+            # print(f'Звук: {rows}')
 
             # Write animal and sound
             res[animal] = rows
